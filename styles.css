@@ -1,0 +1,217 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+}
+
+
+.container{
+
+    height: 100vh;
+    width: 80vw;
+    display: grid;
+
+    grid-template: 
+    "topbar topbar topbar" 0.1fr
+    "left main right"auto/
+    0.2fr 0.5fr auto
+    ;
+    background-color: white;
+    grid-gap: 20px;
+}
+
+
+.topbar{
+
+    grid-area: topbar;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.4fr;
+    background-color: gold;
+    gap: 10px;
+    font-size: 1rem;
+
+}
+
+.topbar > div{
+    display: grid;
+    place-items: center;
+    border: 4px dotted blue;
+}
+
+.topbar > ul{
+    margin: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    place-items: center;
+    align-content: left;
+    justify-content: left;
+    border: 4px dotted blue;
+}
+
+.topbar > ul > li{
+    margin: 10px;
+    margin-left: 0;
+    border: 4px dotted red;
+
+
+}
+.left{
+
+    grid-area: left;
+    display: grid;
+    grid-template-rows: 1fr 0.6fr ;
+    background-color: white;
+    gap: 20px;
+}
+
+.left > .profile{
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr;
+    background-color: aqua;
+    gap: 5px;
+
+}
+
+.left > .profile > div{
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    border: 4px dotted black;
+
+    
+
+
+}
+
+.left > .group{
+
+    border: 4px dotted black;
+    background-color: goldenrod;
+    display: grid;
+    font-size: 2rem;
+
+    place-items: center;
+
+}
+
+.right{
+
+    grid-area: right;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto ;
+    gap: 20px;
+}
+
+
+.right > .news{
+    display: grid;
+    grid-template-rows: auto;
+    background-color: pink;
+    gap: 10px;
+
+}
+.right > .news > div{
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    border: 4px dotted black;
+}
+
+.right > .most-viewed {
+    border: 4px dotted black;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: brown;
+}
+
+.right > .add-to-feed{
+
+    border: 4px dotted black;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: brown;
+}
+
+.main{
+    grid-area: main;
+    display: grid;
+    background-color: green;
+
+    grid-template-rows: 0.2fr 1fr;
+
+    gap: 5px;
+}
+
+
+.main > .post{
+    display: grid;
+
+    grid-template-rows: 0.5fr 0.5fr;
+
+    background-color: purple;
+    gap: 3px;
+}
+
+.main > .post > .post-bar {
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+    border: 4px dotted black;
+    margin: 5px;
+
+    gap: 3px;
+}
+.main > .post > .post-bar > .profile-image{
+    margin: 2px;
+    display: grid;
+    place-items: center;
+    border: 4px dotted blue;
+}
+
+.main > .post > .post-bar > .post-type-bar {
+    margin: 2px;
+    display: grid;
+    place-items: center;
+    border: 4px dotted yellow;
+}
+
+.main > .post > .post-media-icons {
+    margin: 5px;
+    display: grid;
+    border: 4px dotted black;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    gap: 2px;
+
+}
+
+
+.main > .post > .post-media-icons > div {
+    border: 4px dotted green;
+    margin: 2px;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+
+}
+
+.main > .thread {
+    display: grid;
+    margin: 2px;
+    grid-template-columns: 1fr;
+    gap: 5px;
+
+    border: 4px dotted black;
+
+}
+
+.main > .thread > div{
+    margin: 2px;
+    border: 4px dotted black;
+
+}
