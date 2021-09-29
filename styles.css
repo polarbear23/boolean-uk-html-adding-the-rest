@@ -23,11 +23,19 @@ body{
 }
 
 
+.logo{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
 .topbar{
 
     grid-area: topbar;
     display: grid;
-    grid-template-columns: 0.1fr 1fr 0.4fr;
+    grid-template-columns: 100px 1fr 0.4fr;
     background-color: gold;
     gap: 10px;
     font-size: 1rem;
@@ -81,9 +89,6 @@ body{
     place-items: center;
     font-size: 2rem;
     border: 4px dotted black;
-
-    
-
 
 }
 
@@ -214,4 +219,44 @@ body{
     margin: 2px;
     border: 4px dotted black;
 
+}
+
+
+@media (max-width: 1200px){
+    .right{
+
+        display:none;
+    }
+    .container{
+
+        grid-template: 
+        "topbar topbar" 0.1fr
+        "left main "auto/
+        0.4fr 0.6fr 
+        ;
+        
+    }
+    
+    
+}
+
+@media (max-width: 850px){
+    .right{
+
+        display:none;
+    }
+    .left{
+        display: none;
+    }
+    .container{
+
+        grid-template: 
+        "topbar" 0.1fr
+        "main "auto/
+         1fr 
+        ;
+        
+    }
+    
+    
 }
